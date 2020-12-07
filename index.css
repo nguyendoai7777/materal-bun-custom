@@ -1,0 +1,51 @@
+.button {
+  font-family: 'Roboto', sans-serif;
+  min-width: 64px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: #2196F3;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+}
+
+.ripple-effect-light {
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ripple-effect-dark {
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(0);
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ripple-animation {
+  animation: ripple-drop 0.4s cubic-bezier(0, 0, 0.3, 1);
+}
+
+@keyframes ripple-drop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
